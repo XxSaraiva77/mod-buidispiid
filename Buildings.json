@@ -1,0 +1,361 @@
+[
+        {
+                "name": "Palace",
+                "isNationalWonder": true,
+                "production": 3,
+                "science": 3,
+                "gold": 3,
+                "culture": 1,
+                "cityStrength": 2.5,
+                "cost": 0,
+                "uniques": ["Indicates the capital city"]
+        },
+        {
+                "name": "Monument",
+                "culture": 2,
+                "cost": 1,
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "uniques": ["Destroyed when the city is captured"]
+        },
+        {
+                "name": "Granary",
+                "food": 2,
+                "cost": 1,
+                "maintenance": 1,
+                "hurryCostModifier": 0,
+                "uniques": ["[+1 Food] from [Deer] tiles [in this city]", "[+1 Food] from [Bananas] tiles [in this city]", "[+1 Food] from [Wheat] tiles [in this city]"],
+                "requiredTech": "Pottery"
+        },
+        {
+                "name": "Temple of Artemis",
+                "culture": 1,
+                "cost": 1,
+                "isWonder": true,
+                "greatPersonPoints": {"Great Engineer": 1},
+                "uniques": ["[+10]% [Food] [in all cities]", "[+15]% Production when constructing [Archery] units [in this city]", "[+15]% Production when constructing [Ranged Gunpowder] units [in this city]"],
+                "requiredTech": "Archery"
+        },
+        {
+                "name": "The Great Lighthouse",
+                "cost": 1,
+                "culture": 1,
+                "greatPersonPoints": {"Great Merchant": 1},
+                "isWonder": true,
+                "uniques": ["Must be next to [Coast]", "[+1] Movement <for [{Military} {Water}] units>", "[+1] Sight <for [{Military} {Water}] units>", "Gain a free [Lighthouse] [in this city]"],
+                "requiredTech": "Sailing"
+        },
+        {
+                "name": "Stone Works",
+                "cost": 1,
+                "happiness": 1,
+                "production": 1,
+                "requiredNearbyImprovedResources": ["Marble", "Stone"],
+                "maintenance": 1,
+                "hurryCostModifier": 0,
+                "uniques": ["Must not be on [Plains]", "[+1 Production] from [Stone] tiles [in this city]", "[+1 Production] from [Marble] tiles [in this city]"],
+                "requiredTech": "Calendar"
+        },
+        {
+                "name": "Stonehenge",
+                "cost": 1,
+                "culture": 6,
+                "isWonder": true,
+                "greatPersonPoints": {"Great Engineer": 1},
+                "requiredTech": "Calendar"
+        },
+        {
+                "name": "Library",
+                "cost": 1,
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "uniques": ["[+1 Science] per [2] population [in this city]"],
+                "requiredTech": "Writing"
+        },
+        {
+                "name": "Paper Maker",
+                "replaces": "Library",
+                "cost": 1,
+                "uniqueTo": "China",
+                "hurryCostModifier": 0,
+                "gold": 2,
+                "uniques": ["[+1 Science] per [2] population [in this city]"],
+                "requiredTech": "Writing"
+        },
+        {
+                "name": "The Great Library",
+                "cost": 1,
+                "science": 3,
+                "culture": 1,
+                "greatPersonPoints": {"Great Scientist": 1},
+                "isWonder": true,
+                "requiredTech": "Writing",
+                "uniques": ["Free Technology", "Gain a free [Library] [in this city]"]
+        },
+        {
+                "name": "Circus",
+                "cost": 1,
+                "requiredNearbyImprovedResources": ["Ivory","Horses"],
+                "happiness": 2,
+                "hurryCostModifier": 0,
+                "requiredTech": "Trapping"
+        },
+        {
+                "name": "Water Mill",
+                "cost": 1,
+                "maintenance": 2,
+                "food": 2,
+                "production": 1,
+                "hurryCostModifier": 0,
+                "uniques": ["Must be on [River]"],
+                "requiredTech": "The Wheel"
+        },
+        {
+                "name": "Floating Gardens",
+                "replaces": "Water Mill",
+                "cost": 1,
+                "uniqueTo": "Aztecs",
+                "food": 2,
+                "production": 1,
+                "uniques": ["[+2 Food] from [Lakes] tiles [in this city]", "Must be next to [Fresh water]"],
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "percentStatBonus": {"food": 15},
+                "requiredTech": "The Wheel"
+        },
+        {
+                "name": "Walls",
+                "cost": 1,
+                "cityStrength": 4,
+                "cityHealth": 50,
+                "hurryCostModifier": 0,
+                "requiredTech": "Masonry",
+                "uniques": ["Destroyed when the city is captured"]
+        },
+        {
+                "name": "Walls of Babylon",
+                "replaces": "Walls",
+                "cost": 1,
+                "uniqueTo": "Babylon",
+                "cityStrength": 6,
+                "cityHealth": 100,
+                "hurryCostModifier": 0,
+                "requiredTech": "Masonry",
+                "uniques": ["Destroyed when the city is captured"]
+        },
+        {
+                "name": "The Pyramids",
+                "cost": 1,
+                "culture": 1,
+                "greatPersonPoints": {"Great Engineer": 1},
+                "isWonder": true,
+                "uniques": ["Can build [all] improvements at a [+25]% rate","[2] free [Worker] units appear"],
+                "requiredTech": "Masonry"
+        },
+        {
+                "name": "Mausoleum of Halicarnassus",
+                "cost": 1,
+                "culture": 1,
+                "greatPersonPoints": {"Great Merchant": 1},
+                "isWonder": true,
+                "uniques": ["Gain [100] [Gold] <upon expending a [Great Person] unit> <(modified by game speed)>", "[+2 Gold] from [Marble] tiles [in this city]", "[+2 Gold] from [Stone] tiles [in this city]"],
+                "requiredTech": "Masonry"
+        },
+        {
+                "name": "Barracks",
+                "cost": 1,
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "uniques": ["New [Military] units start with [15] XP [in this city]", "Destroyed when the city is captured"],
+                "requiredTech": "Bronze Working"
+        },
+        {
+                "name": "Krepost",
+                "replaces": "Barracks",
+                "cost": 1,
+                "uniqueTo": "Russia",
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "uniques": ["[-25]% Culture cost of natural border growth [in this city]","[-25]% Gold cost of acquiring tiles [in this city]", "New [Military] units start with [15] XP [in this city]", "Destroyed when the city is captured"],
+                "requiredTech": "Bronze Working"
+        },
+        {
+                "name": "Statue of Zeus",
+                "cost": 1,
+                "culture": 1,
+                "isWonder": true,
+                "uniques": ["[+15]% Strength <for [All] units> <vs cities> <when attacking>"],
+                "requiredTech": "Bronze Working"
+        },
+        {
+                "name": "Lighthouse",
+                "cost": 1,
+                "hurryCostModifier": 0,
+                "maintenance": 1,
+                "uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]", "[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]" ],
+                "requiredTech": "Optics"
+        },
+        {
+                "name": "Stable",
+                "cost": 1,
+                "maintenance": 1,
+                "requiredNearbyImprovedResources": ["Horses","Sheep","Cattle"],
+                "hurryCostModifier": 0,
+                "uniques": ["[+15]% Production when constructing [Mounted] units [in this city]", "[+1 Production] from [Cattle] tiles [in this city]", "[+1 Production] from [Horses] tiles [in this city]", "[+1 Production] from [Sheep] tiles [in this city]"],
+                "requiredTech": "Horseback Riding"
+        },
+        {
+                "name": "Courthouse",
+                "cost": 1,
+                "maintenance": 4,
+                "hurryCostModifier": 0,
+                "uniques": ["Removes extra unhappiness from annexed cities", "Can only be built <in [Annexed] cities>"],
+                "requiredTech": "Mathematics"
+        },
+        {
+                "name": "Hanging Gardens",
+                "cost": 1,
+                "greatPersonPoints": {"Great Artist": 1},
+                "food": 10,
+                "culture": 1,
+                "isWonder": true,
+                "requiredTech": "Mathematics"
+        },
+        {
+                "name": "Colosseum",
+                "cost": 1,
+                "maintenance": 1,
+                "happiness": 2,
+                "hurryCostModifier": 0,
+                "requiredTech": "Construction"
+        },
+        {
+                "name": "Circus Maximus",
+                "cost": 1,
+                "happiness": 5,
+                "culture": 1,
+                "isNationalWonder": true,
+                "uniques": ["Only available <if [Colosseum] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
+                "requiredTech": "Construction"
+        },
+        {
+                "name": "Great Wall",
+                "cost": 1,
+                "culture": 3,
+                "greatPersonPoints": {"Great Engineer": 1},
+                "isWonder": true,
+                "uniques": ["Enemy [Land] units must spend [1] extra movement points when inside your territory <before discovering [Dynamite]> <Suppress warning [*contains a conditional on a unit movement unique*]>", "Gain a free [Walls] [in this city]"],
+                "requiredTech": "Construction"
+        },
+        {
+                "name": "Temple",
+                "cost": 1,
+                "culture": 3,
+                "requiredBuilding": "Monument",
+                "maintenance": 2,
+                "hurryCostModifier": 0,
+                "requiredTech": "Philosophy",
+                "specialistSlots": {"Artist": 1},
+                "uniques": ["Destroyed when the city is captured"]
+        },
+        {
+                "name": "National College",
+                "cost": 1,
+                "science": 3,
+                "culture": 1,
+                "isNationalWonder": true,
+                "percentStatBonus": {"science": 50},
+                "uniques": ["Only available <if [Library] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
+                "requiredTech": "Philosophy"
+        },
+        {
+                "name": "The Oracle",
+                "cost": 1,
+                "culture": 3,
+                "greatPersonPoints": {"Great Scientist": 1},
+                "isWonder": true,
+                "uniques": ["Free Social Policy"],
+                "requiredTech": "Philosophy"
+        },
+        {
+                "name": "National Epic",
+                "cost": 1,
+                "culture": 1,
+                "isNationalWonder": true,
+                "uniques": ["Only available <if [Monument] is constructed in all [non-[Puppeted]] cities>", "[+25]% Great Person generation [in this city]", "Cost increases by [30] per owned city"],
+                "requiredTech": "Philosophy"
+        },
+        {
+                "name": "Market",
+                "cost": 1,
+                "gold": 2,
+                "specialistSlots": {"Merchant": 1},
+                "hurryCostModifier": 0,
+                "percentStatBonus": {"gold": 25},
+                "requiredTech": "Currency"
+        },
+        {
+                "name": "Aqueduct",
+                "cost": 1,
+                "maintenance": 1,
+                "hurryCostModifier": 0,
+                "uniques": ["[40]% Food is carried over after population increases [in this city]"],
+                "requiredTech": "Engineering"
+        },
+        {
+                "name": "Workshop",
+                "cost": 1,
+                "maintenance": 2,
+                "production": 2,
+                "specialistSlots": {"Engineer": 1},
+                "hurryCostModifier": 0,
+                "percentStatBonus": {"production": 10},
+                "requiredTech": "Metal Casting"
+        },
+        {
+                "name": "University",
+                "cost": 1,
+                "maintenance": 2,
+                "hurryCostModifier": 0,
+                "percentStatBonus": {"science": 33},
+                "specialistSlots": {"Scientist": 2},
+                "requiredBuilding": "Library",
+                "uniques": ["[+2 Science] from [Jungle] tiles [in this city]"],
+                "requiredTech": "Education"
+        },
+        {
+                "name": "Notre Dame",
+                "cost": 1,
+                "culture": 3,
+                "happiness": 10,
+                "greatPersonPoints": {"Great Merchant": 1},
+                "isWonder": true,
+                "requiredTech": "Education"
+        },
+        {
+                "name": "Factory",
+                "cost": 1,
+                "production": 4,
+                "percentStatBonus": {"production": 10},
+                "specialistSlots": {"Engineer": 2},
+                "requiredBuilding": "Workshop",
+                "maintenance": 3,
+                "hurryCostModifier": 0,
+                "requiredResource": "Coal",
+                "requiredTech": "Steam Power"
+        },
+        {
+                "name": "Apollo Program",
+                "cost": 1,
+                "isNationalWonder": true,
+                "uniques": ["Enables construction of Spaceship parts", "Triggers a global alert upon completion", "Only available <when [Scientific] Victory is enabled>", "Cannot be hurried"],
+                "requiredTech": "Rocketry"
+        },
+        {
+                "name": "Utopia Project",
+                "cost": 1,
+                "isNationalWonder": true,
+                "uniques": ["Unavailable <when number of [Completed Policy branches] is less than [5]>", "Triggers a global alert upon build start", "Triggers a Cultural Victory upon completion", "Only available <when [Cultural] Victory is enabled>", "Cannot be hurried"]
+        }
+]
+
