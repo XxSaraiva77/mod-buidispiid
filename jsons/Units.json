@@ -35,6 +35,7 @@
                 "unitType": "Sword",
                 "movement": 2,
                 "strength": 8,
+                "maintenanceCost": 10,
                 "cost": 1,
                 "requiredTech": "Agriculture",
                 "obsoleteTech": "Metal Casting",
