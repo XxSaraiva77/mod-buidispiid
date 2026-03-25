@@ -1,16 +1,24 @@
 [
+        // Info according to Civilization Wiki and https://www.civfanatics.com/civ5/info/units/
+
+        /* Ancient Era */
         {
                 "name": "Worker",
                 "unitType": "Civilian",
-                "movement": 6,
+                "movement": 2,
                 "requiredTech": "Agriculture",
-                "uniques": ["Can build [Land] improvements on tiles", "[+1000]% speed when building [All] improvements", "Automation is a primary action"],
+                "uniques": [
+                    "Can build [Land] improvements on tiles", 
+                    "Automation is a primary action",
+                    "Increases improvement construction speed by [1000]%",
+                    "Can move to any revealed tile [in your territory]"
+                ],
                 "cost": 70
         },
         {
                 "name": "Settler",
                 "unitType": "Civilian",
-                "movement": 5,
+                "movement": 2,
                 "cost": 106,
                 "requiredTech": "Agriculture",
                 "uniques": ["Founds a new city <by consuming this unit>", "Excess Food converted to Production when under construction",
@@ -142,11 +150,10 @@
         {
                 "name": "Work Boats",
                 "unitType": "Civilian Water",
-                "movement": 6,
+                "movement": 4,
                 "cost": 50,
                 "requiredTech": "Sailing",
                 "uniques": ["Cannot enter ocean tiles <before discovering [Astronomy]>", "May create improvements on water resources",
-            "[{+1000}%] speed when building [All] improvements",
             "Uncapturable", "Automation is a primary action"]
         },
         {
@@ -174,6 +181,7 @@
                 "upgradesTo": "Trireme",
                 "obsoleteTech": "Astronomy",
                 "attackSound": "nonmetalhit"
+                //Barbarian unique naval unit, weaker and slower than Trireme.
         },
         {
                 "name": "Chariot Archer",
@@ -275,6 +283,7 @@
                 "attackSound": "metalhit"
         },
 
+        /* Classical Era */
         {
                 "name": "Horseman",
                 "unitType": "Mounted",
@@ -385,6 +394,7 @@
                 "attackSound": "metalhit"
         },
 
+        // Medieval Era
         {
                 "name": "Pikeman",
                 "unitType": "Sword",
@@ -410,6 +420,7 @@
                 "upgradesTo": "Lancer",
                 "obsoleteTech": "Metallurgy",
                 "attackSound": "metalhit"
+                //"Requires [Mercenary Army]" in BNW
         },
         {
                 "name": "Knight",
@@ -619,7 +630,10 @@
                 "promotions": ["Amphibious"],
                 "hurryCostModifier": 20,
                 "attackSound": "metalhit"
+                //Danish unique unit. Can attack from the sea without any penalty, and moves faster.
         },
+
+        // Rennaisance Era
 
         {
                 "name": "Caravel",
@@ -847,6 +861,8 @@
                 "attackSound": "cavalry"
         },
 
+        // Industrial Era
+
         {
                 "name": "Ironclad",
                 "unitType": "Ranged Water",
@@ -876,6 +892,8 @@
                 "promotions": ["Indirect Fire"],
                 "attackSound": "artillery"
         },
+
+        // Modern era
 
         {
                 "name": "Submarine",
@@ -927,6 +945,7 @@
                 "requiredResource": "Oil",
                 "upgradesTo": "Jet Fighter",
                 "uniques": ["[100]% chance to intercept air attacks", "[+150]% Strength <vs [Bomber] units>", "[+100]% Strength <vs [Helicopter] units>"],
+        // TODO: Weak Ranged Attack
                 "attackSound": "machinegun"
         },
         {
@@ -951,6 +970,7 @@
                 "uniques": ["Never appears as a Barbarian unit"],
                 "promotions": ["Indirect Fire"],
                 "attackSound": "shipguns"
+                // Does not actually upgrade to Missile Cruisers
         },
         {
                 "name": "Anti-Aircraft Gun",
@@ -998,6 +1018,8 @@
                 "attackSound": "machinegun"
         },
 
+    // Modern Era
+
         {
                 "name": "Bomber",
                 "unitType": "Bomber",
@@ -1038,6 +1060,7 @@
                 "requiredTech": "Radar",
                 "uniques": ["May Paradrop to [Land] tiles up to [5] tiles away <in [{Friendly} {Land}] tiles>", "Never appears as a Barbarian unit"],
                 "attackSound": "shot"
+                // upgradesTo "XCOM Squad", "No Movement Cost to Pillage" in BNW
         },
         {
                 "name": "Tank",
@@ -1064,6 +1087,7 @@
                 "upgradesTo": "Modern Armor",
                 "uniques": ["Can move after attacking","No defensive terrain bonus", "[-25]% Strength <vs cities> <when attacking>"],
                 "attackSound": "tankshot"
+                //German unique unit, stronger than Tank
         },
         {
                 "name": "Anti-Tank Gun",
@@ -1090,6 +1114,8 @@
                 "uniques": ["Nuclear weapon of Strength [1]", "Only available <if [Manhattan Project] is constructed>", "Self-destructs when attacking",
                         "Blast radius [2]"],
                 "attackSound": "nuke"
+                // Plane rather than a missile - can be based in city or Carrier only.
+                // Can be intercepted, but must die for it not to take effect.
         },
         {
                 "name": "Rocket Artillery",
@@ -1144,6 +1170,8 @@
                 "attackSound": "nuke"
         },
         {
+                // "Hovering unit" unique gives ability to get into impassable tiles - and only that (no vision bonus or flying over ocean)
+                // Unit embarks like any other ground unit and has penalty for attacking over river or from embarked state
                 "name": "Helicopter Gunship",
                 "unitType": "Helicopter",
                 "movement": 6,
@@ -1156,6 +1184,7 @@
                 "attackSound": "machinegun"
         },
 
+        // Information Era
         {
                 "name": "Nuclear Submarine",
                 "unitType": "Submarine",
@@ -1245,6 +1274,8 @@
                 "attackSound": "bombing"
         },
 
+        /* Great people */
+
         {
                 "name": "Great Artist",
                 "unitType": "Civilian",
@@ -1253,7 +1284,7 @@
             "Can instantly construct a [Landmark] improvement <by consuming this unit>",
             "Is part of Great Person group [Artist]",
             "Great Person - [Culture]", "Unbuildable", "Uncapturable"],
-                "movement": 4
+                "movement": 2
         },
         {
                 "name": "Great Scientist",
@@ -1262,7 +1293,7 @@
             "Can instantly construct a [Academy] improvement <by consuming this unit>",
             "Is part of Great Person group [Scientist]",
             "Great Person - [Science]", "Unbuildable", "Uncapturable"],
-                "movement": 4
+                "movement": 2
         },
         {
                 "name": "Great Merchant",
@@ -1271,7 +1302,7 @@
             "Can instantly construct a [Customs house] improvement <by consuming this unit>",
             "Is part of Great Person group [Merchant]",
                         "Great Person - [Gold]", "Unbuildable", "Uncapturable"],
-                "movement": 4
+                "movement": 2
         },
         {
                 "name": "Great Engineer",
@@ -1280,7 +1311,7 @@
             "Can instantly construct a [Manufactory] improvement <by consuming this unit>",
             "Is part of Great Person group [Engineer]",
             "Great Person - [Production]", "Unbuildable", "Uncapturable"],
-                "movement": 4
+                "movement": 2
         },
         {
                 "name": "Great General",
@@ -1292,7 +1323,7 @@
                         "Can be earned through combat",
             "Is part of Great Person group [General]",
                         "Great Person - [War]", "Unbuildable", "Uncapturable"],
-                "movement": 4
+                "movement": 2
         },
         {
                 "name": "Khan",
@@ -1307,9 +1338,12 @@
                         "Can be earned through combat",
             "Is part of Great Person group [General]",
             "Great Person - [War]", "Unbuildable", "Uncapturable"],
-                "movement": 6
+                "movement": 5
         },
 
+        /* Spaceship Parts */
+        // Must be transported to the Capital for launch.
+        // Can be destroyed by any hostile military unit walking in their tile.
         {
                 "name": "SS Booster",
                 "unitType": "Civilian",
@@ -1318,6 +1352,7 @@
                 "requiredTech": "Robotics",
                 "requiredResource": "Aluminum",
                 "uniques": ["Spaceship part", "Cannot be purchased", "Only available <if [Apollo Program] is constructed>", "Uncapturable", "Can be added to [The Spaceship] in the Capital", "Limited to [3] per Civilization", "Only available <when [Scientific] Victory is enabled>"]
+                // costs 1500 in BNW
         },
         {
                 "name": "SS Cockpit",
@@ -1327,6 +1362,7 @@
                 "requiredTech": "Satellites",
                 "requiredResource": "Aluminum",
                 "uniques": ["Spaceship part", "Cannot be purchased", "Only available <if [Apollo Program] is constructed>", "Uncapturable", "Can be added to [The Spaceship] in the Capital", "Limited to [1] per Civilization", "Only available <when [Scientific] Victory is enabled>"]
+                // costs 1500 in BNW
         },
         {
                 "name": "SS Engine",
@@ -1336,6 +1372,7 @@
                 "requiredTech": "Particle Physics",
                 "requiredResource": "Aluminum",
                 "uniques": ["Spaceship part", "Cannot be purchased", "Only available <if [Apollo Program] is constructed>", "Uncapturable", "Can be added to [The Spaceship] in the Capital", "Limited to [1] per Civilization", "Only available <when [Scientific] Victory is enabled>"]
+                // costs 1500 in BNW
         },
         {
                 "name": "SS Stasis Chamber",
@@ -1345,5 +1382,6 @@
                 "requiredTech": "Nanotechnology",
                 "requiredResource": "Aluminum",
                 "uniques": ["Spaceship part", "Cannot be purchased", "Only available <if [Apollo Program] is constructed>", "Uncapturable", "Can be added to [The Spaceship] in the Capital", "Limited to [1] per Civilization", "Only available <when [Scientific] Victory is enabled>"]
+                // costs 1500 in BNW
         }
 ]
